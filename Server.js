@@ -32,11 +32,19 @@ res.on('finish',()=>{
 app.use(express.json())
 
 app.post('/friends',(req,res)=>{
+    if(!req.body.name){
+        res.status(400).json(
+            {
+                error:"Missing Friend"
+            }
+        )
+    }
 const friendAdd={
     name:req.body.name,
     id:friends.length
 }
 friends.push(friendAdd)
+res.json(friends[friends.length-1])
 })
 app.get('/friends',(req,res)=>
 {
