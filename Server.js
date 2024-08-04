@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
     const startTime=Date.now();
 next();
 res.on('finish',()=>{
-    const timeTaken=Date.now-startTime
+    const timeTaken=Date.now()-startTime
     console.log(`Method =${req.method} and url=${req.url}
          Time for Execution=${timeTaken}ms`)
 })
