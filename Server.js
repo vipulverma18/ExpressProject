@@ -36,7 +36,7 @@ const friendAdd={
     name:req.body.name,
     id:friends.length
 }
-
+friends.push(friendAdd)
 })
 app.get('/friends',(req,res)=>
 {
