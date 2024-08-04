@@ -1,0 +1,19 @@
+const friends=[
+    {
+        id:0,
+        name:'Vipul',
+        age:30
+    },
+    {
+        id:1,
+        name:'Chirag',
+        age:26
+    },{
+        id:2,
+        name:'Varun',
+        age:34
+    }
+]
+module.exports={
+    friends
+}
