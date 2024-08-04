@@ -41,10 +41,11 @@ app.post('/friends',(req,res)=>{
     }
 const friendAdd={
     name:req.body.name,
+    age:req.body.age,
     id:friends.length
 }
 friends.push(friendAdd)
-res.json(friends[friends.length-1])
+res.json(friendAdd)
 })
 app.get('/friends',(req,res)=>
 {
