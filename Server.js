@@ -1,7 +1,7 @@
 const express = require('express')
 const friendRouter = require('./Routes/friends.routes')
 const messageRouter = require('./Routes/messages.route')
-
+const path=require('path')
 
 
 const app = express();
@@ -19,8 +19,10 @@ app.use((req, res, next) => {
 })
 app.use(express.json())
 
+
 app.use('/friends', friendRouter)
 app.use('/messages', messageRouter)
+app.use('/site',express.static(path.join(__dirname,'public')))
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
