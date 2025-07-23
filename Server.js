@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 app.use(express.json())
 
 
-app.use('/friends', friendRouter)
+app.use('/friends', friendRouter)//defining routes
 app.use('/messages', messageRouter)
 app.use('/site',express.static(path.join(__dirname,'public')))
 
